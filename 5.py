@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.array((1, 2, 3, 4, 5, 6))
+y = np.array((1, 1.7, 2.3, 2.8, 3.14, 3.71))
+a = np.polyfit(x, y, deg=1)
+b = np.poly1d(a)
+c = np.polyfit(x, y, deg=2)
+d = np.poly1d(c)
+x_a = np.linspace(x[0], x[-1])
+y_a = b(x_a)
+x_c = np.linspace(x[0], x[-1])
+y_c = d(x_c)
+plt.plot(x, y, '--o', x_a, y_a, x_c, y_c)
+plt.xlim(x[0]-1, x[-1]+1)
+plt.show()
