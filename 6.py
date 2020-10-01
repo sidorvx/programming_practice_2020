@@ -1,10 +1,9 @@
-import numpy as np
-import matplotlib.pyplot as plt
-x = np.arange(-2, 2, 0.001)
-n = 10
-a = 3
-b = 1/2
-S = 0
-for i in range(0, n+1): S += np.power(b, i)*np.cos(np.power(a, i)*np.pi*x)
-plt.plot(x, S)
-plt.show()
+pervoe = int(input())
+vtoroe = int(input())
+if pervoe<vtoroe: pervoe, vtoroe = vtoroe, pervoe
+n = int(input())
+while n != 0:
+    if n>pervoe: vtoroe, pervoe = pervoe, n
+    elif n>vtoroe: vtoroe = n
+    n = int(input())
+print(vtoroe)

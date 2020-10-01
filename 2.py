@@ -1,5 +1,5 @@
-import numpy as np
-import matplotlib.pyplot as plt
-x = np.arange(-10, 10.01, 0.01)
-plt.plot(x*x - x - 6)
-plt.show()
+text = input()
+n = int(input())
+b = ', {}'.format(text)
+s = b*n
+print('Hello' + s)
